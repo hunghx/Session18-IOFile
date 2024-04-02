@@ -1,6 +1,8 @@
 package iofile;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -46,12 +48,14 @@ public class Main {
 //        sc.next();
 //        sc.close();
         Student student = new Student();
-        student.id = 2;
-        student.name = "nam";
+        student.id = 3;
+        student.name = "khanh";
 
         writeStudent("student.csv",student);
-        Student s = readStudent("student.csv");
-        System.out.printf("id : %s | name : %s",s.id,s.name);
+        List<Student> list = readStudent("student.csv");
+        for (Student s : list) {
+            System.out.printf("id : %s | name : %s \n", s.id, s.name);
+        }
 
     }
 
@@ -146,12 +150,17 @@ public class Main {
     // B2 : su dung ObjectOutputStream
 
     public static void writeStudent(String path, Student student) {
+        File file = new File(path);
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
-
         try {
-            fos = new FileOutputStream(path);
-            oos = new ObjectOutputStream(fos);
+
+            fos = new FileOutputStream(path,true);
+            if (file.exists() && file.length()>0){
+                oos = new AppendObjectOutputStream(fos);
+            }else {
+                oos = new ObjectOutputStream(fos);
+            }
             oos.writeObject(student);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -171,19 +180,24 @@ public class Main {
             }
         }
     }
-    public static Student readStudent(String path) {
+    public static List<Student> readStudent(String path) {
+        List<Student> list = new ArrayList<>();
         FileInputStream fis = null;
         ObjectInputStream ois = null;
 
         try {
             fis = new FileInputStream(path);
             ois = new ObjectInputStream(fis);
-           Student student = (Student) ois.readObject();
-           return student;
+            while (true) {
+                Student student = (Student) ois.readObject();
+                list.add(student);
+            }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        }catch (EOFException e) {
+
+        }catch(IOException e) {
+            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } finally {
@@ -199,5 +213,6 @@ public class Main {
                 throw new RuntimeException(e);
             }
         }
+        return list;
     }
 }
