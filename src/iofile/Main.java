@@ -195,7 +195,7 @@ public class Main {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }catch (EOFException e) {
-
+            e.printStackTrace();
         }catch(IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

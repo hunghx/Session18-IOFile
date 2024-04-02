@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ceb52ae-0fa8-42f7-9cb1-f7fbc120b9e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/iofile/AppendObjectOutputStream.java" afterDir="false" />
+    <list default="true" id="7ceb52ae-0fa8-42f7-9cb1-f7fbc120b9e3" name="Changes" comment="xscvf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iofile/AppendObjectOutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iofile/AppendObjectOutputStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/iofile/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iofile/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentCopy.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/AD/Desktop/Java_MD4_Boot_Security_JWT/Session18-IO-File/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -86,11 +90,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712021761698</updated>
-      <workItem from="1712021762896" duration="5863000" />
+      <workItem from="1712021762896" duration="7534000" />
     </task>
+    <task id="LOCAL-00001" summary="xscvf">
+      <option name="closed" value="true" />
+      <created>1712029898366</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712029898366</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xscvf" />
+    <option name="LAST_COMMIT_MESSAGE" value="xscvf" />
   </component>
 </project>

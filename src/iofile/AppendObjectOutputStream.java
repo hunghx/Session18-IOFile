@@ -11,6 +11,6 @@ public class AppendObjectOutputStream extends ObjectOutputStream {
 
     @Override
     protected void writeStreamHeader() throws IOException {
-        super.writeStreamHeader();
+        reset();
     }
 }
